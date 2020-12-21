@@ -1542,8 +1542,10 @@ YY_RULE_SETUP
 #line 496 "src/glsl/glcpp/glcpp-lex.l"
 {
 	if (! parser->skipping) {
-		if (parser->is_gles)
-			glcpp_error(yylloc, yyextra, "Token pasting (##) is illegal in GLES");
+        if ((0)) {
+            if (parser->is_gles)
+                glcpp_error(yylloc, yyextra, "Token pasting (##) is illegal in GLES");
+        }
 		RETURN_TOKEN (PASTE);
 	}
 }
