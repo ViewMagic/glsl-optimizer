@@ -707,7 +707,7 @@ static const char *const operator_glsl_strs[] = {
 	"fma",
 	"clamp",
 	"mix",
-	"csel_TODO",
+	"mix",
 	"bfi_TODO",
 	"bitfield_extract_TODO",
 	"vector_insert_TODO",

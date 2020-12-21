@@ -3002,7 +3002,7 @@ builtin_builder::_mix_sel(builtin_available_predicate avail,
     *
     * To handle the behavior mismatch, reverse the x and y arguments.
     */
-   body.emit(ret(csel(a, y, x)));
+   body.emit(ret(csel(x, y, a)));
 
    return sig;
 }
