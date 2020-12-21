@@ -6402,11 +6402,20 @@ yyreduce:
                                "required for defining uniform blocks");
          }
       } else {
-         if (state->es_shader || state->language_version < 150) {
-            _mesa_glsl_error(& (yylsp[(1) - (7)]), state,
-                             "#version 150 required for using "
-                             "interface blocks");
-         }
+          if (state->es_shader) {
+              if (state->language_version < 300) {
+                  _mesa_glsl_error(& (yylsp[(1) - (7)]), state,
+                                   "#version 300 required for using "
+                                   "interface blocks (%u)", state->language_version);
+              }
+          }
+          else {
+              if (state->language_version < 150) {
+                  _mesa_glsl_error(& (yylsp[(1) - (7)]), state,
+                                   "#version 150 required for using "
+                                   "interface blocks (%u)", state->language_version);
+              }
+          }
       }
 
       /* From the GLSL 1.50.11 spec, section 4.3.7 ("Interface Blocks"):
