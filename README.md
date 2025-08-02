@@ -1,3 +1,14 @@
+ViewMagic
+==============
+
+* Forked from: [cbirkhold](https://github.com/cbirkhold/glsl-optimizer) (which is forked from [aras-p](https://github.com/aras-p/glsl-optimizer))
+  * Improves build workflow
+  * Supports newer GLSL
+  * Some bug fixes
+* Option to filter generated names (for post-processing tool)
+* Allow 'token pasting' in GLES (our pre-processor supports it)
+* Allow interface blocks in some versions of GLES
+
 GLSL optimizer
 ==============
 
